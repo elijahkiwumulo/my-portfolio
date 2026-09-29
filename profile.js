@@ -74,7 +74,7 @@ export const profileData = {
     ],
     education: [
         {
-            institution: "Makerere University — Jinja Campus",
+            institution: "Makerere University â€” Jinja Campus",
             degree: "Bachelor of Science in Computer Science",
             status: "Currently pursuing",
             areas: [
