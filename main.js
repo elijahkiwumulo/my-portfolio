@@ -1,6 +1,6 @@
 import { profileData } from '../data/profile.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
     // 1. Initialize Icons
     lucide.createIcons();
 
@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
 
 function populateProfile() {
     const { personal } = profileData;
@@ -215,7 +221,7 @@ function populateCertifications() {
             <div class="flex items-start justify-between">
                 <div>
                     <h4 class="text-white font-medium group-hover:text-primary transition-colors">${cert.name}</h4>
-                    <p class="text-sm text-slate-400 mt-1">${cert.issuer} ${cert.date ? `• ${cert.date}` : ''}</p>
+                    <p class="text-sm text-slate-400 mt-1">${cert.issuer} ${cert.date ? `â€¢ ${cert.date}` : ''}</p>
                 </div>
                 <i data-lucide="external-link" class="w-4 h-4 text-slate-600 group-hover:text-primary transition-colors"></i>
             </div>
