@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elijah Kiwumulo Lule | Computer Science Student & Software Developer</title>
+    <meta name="description" content="Portfolio of Elijah Kiwumulo Lule — Computer Science student, software developer, video editor and digital media technician from Uganda.">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Elijah Kiwumulo Lule | Portfolio">
+    <meta property="og:description" content="Computer Science student, software developer, video editor and digital media technician from Uganda.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon (using a placeholder generic icon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Tailwind CSS (via CDN for zero-build setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#38bdf8', // sky-400
+                        darkBg: '#0f172a', // slate-900
+                        cardBg: '#1e293b', // slate-800
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-darkBg text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-xl font-bold text-white tracking-tight hover:text-primary transition-colors">
+                    <span id="nav-name">Elijah.</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#github-repos" class="hover:text-primary transition-colors">GitHub</a>
+                    <a href="#media" class="hover:text-primary transition-colors">Media</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-slate-300 hover:text-white" id="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="md:hidden hidden absolute w-full bg-slate-900 border-b border-slate-800 shadow-xl" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">About</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">Projects</a>
+                <a href="#github-repos" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">GitHub</a>
+                <a href="#media" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">Media</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">Experience</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium hover:text-primary transition-colors mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left fade-in-section">
+                <p class="text-primary font-medium tracking-wide uppercase text-sm">Hello, I'm</p>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    <span id="hero-name">Loading...</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-slate-400 font-medium" id="hero-headline">Loading...</h2>
+                <p class="text-lg text-slate-400 max-w-lg mx-auto md:mx-0" id="hero-desc">Loading...</p>
+                
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+                    <a href="#projects" class="px-6 py-3 bg-primary hover:bg-sky-500 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
+                        View My Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" id="cv-btn" class="px-6 py-3 bg-cardBg hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-700 hover:border-slate-600 transition-all flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4"></i> Download CV
+                    </a>
+                    <a href="#contact" class="px-6 py-3 text-slate-300 hover:text-white font-medium transition-colors flex items-center">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center fade-in-section" style="transition-delay: 200ms;">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-cardBg border-4 border-slate-800 shadow-2xl overflow-hidden flex items-center justify-center glow-card">
+                    <!-- Profile Image -->
+                    <i data-lucide="user" class="w-32 h-32 text-slate-600"></i>
+                    <img id="profile-img" src="./assets/profile.jpg" alt="Elijah Kiwumulo Lule" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto fade-in-section">
+            <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <i data-lucide="user-check" class="text-primary"></i> About Me
+            </h2>
+            <div class="bg-cardBg rounded-2xl p-8 border border-slate-800 shadow-xl text-lg leading-relaxed text-slate-300" id="about-text">
+                Loading...
+            </div>
+            
+            <!-- Education Sub-section -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <i data-lucide="graduation-cap" class="text-primary"></i> Education
+                </h3>
+                <div id="education-container" class="space-y-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto fade-in-section">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3 text-center justify-center">
+                <i data-lucide="code-2" class="text-primary"></i> Technical Skills
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="skills-container">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto fade-in-section">
+            <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                <i data-lucide="briefcase" class="text-primary"></i> Featured Projects
+            </h2>
+            <p class="text-slate-400 mb-12 max-w-2xl">A selection of my best work, spanning web development, mobile applications, and software solutions.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="projects-container">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Integration Section -->
+    <section id="github-repos" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto fade-in-section">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                        <i data-lucide="github" class="text-primary"></i> GitHub Repositories
+                    </h2>
+                    <p class="text-slate-400 max-w-2xl">Automatically fetched from my public GitHub profile.</p>
+                </div>
+                <a href="#" id="github-profile-btn" target="_blank" class="px-6 py-2 bg-slate-800 hover:bg-slate-700 text-white font-medium rounded-lg border border-slate-700 transition-all flex items-center gap-2 whitespace-nowrap">
+                    View GitHub Profile <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <!-- Loading State -->
+            <div id="github-loading" class="flex justify-center items-center py-12">
+                <i data-lucide="loader-2" class="w-8 h-8 text-primary animate-spin"></i>
+                <span class="ml-3 text-slate-400">Fetching repositories...</span>
+            </div>
+            
+            <!-- Error State -->
+            <div id="github-error" class="hidden text-center py-12 text-red-400 bg-red-900/10 rounded-xl border border-red-900/50">
+                <i data-lucide="alert-circle" class="w-8 h-8 mx-auto mb-2"></i>
+                <p>Could not fetch GitHub repositories. Please check the username configuration.</p>
+            </div>
+
+            <!-- Repos Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="github-container">
+                <!-- Populated by JS via GitHub API -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Video Editing Section -->
+    <section id="media" class="py-20 px-4 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto fade-in-section">
+            <h2 class="text-3xl font-bold text-white mb-4 flex items-center gap-3">
+                <i data-lucide="video" class="text-primary"></i> Video Editing & Media
+            </h2>
+            <p class="text-slate-400 mb-12 max-w-2xl">Practical experience editing videos and producing digital content, including live sound engineering and event production.</p>
+            
+            <!-- Tools grid -->
+            <div class="flex flex-wrap gap-3 mb-12" id="media-tools-container">
+                <!-- Populated by JS -->
+            </div>
+            
+            <!-- Media Gallery (Placeholders) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Placeholder 1 -->
+                <div class="aspect-video bg-cardBg rounded-xl border border-slate-800 overflow-hidden relative group">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="play-circle" class="w-12 h-12 text-slate-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-slate-900 to-transparent">
+                        <p class="text-white font-medium text-sm">YouTube Video Placeholder</p>
+                    </div>
+                </div>
+                <!-- Placeholder 2 -->
+                <div class="aspect-video bg-cardBg rounded-xl border border-slate-800 overflow-hidden relative group">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="image" class="w-12 h-12 text-slate-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-slate-900 to-transparent">
+                        <p class="text-white font-medium text-sm">Sermon Video Edit</p>
+                    </div>
+                </div>
+                <!-- Placeholder 3 -->
+                <div class="aspect-[9/16] sm:aspect-video lg:aspect-[9/16] bg-cardBg rounded-xl border border-slate-800 overflow-hidden relative group mx-auto w-full max-w-[300px] lg:max-w-full">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i data-lucide="smartphone" class="w-12 h-12 text-slate-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-slate-900 to-transparent">
+                        <p class="text-white font-medium text-sm">TikTok / Reel Placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Certifications -->
+    <section id="experience" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 fade-in-section">
+            <!-- Experience -->
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i data-lucide="activity" class="text-primary"></i> Experience
+                </h2>
+                <div class="space-y-8" id="experience-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                    <i data-lucide="award" class="text-primary"></i> Certifications
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="certs-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto fade-in-section">
+            <h2 class="text-3xl font-bold text-white mb-4 text-center">Get In Touch</h2>
+            <p class="text-slate-400 text-center mb-12">I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'll try my best to get back to you!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <!-- Contact Info & Links -->
+                <div class="md:col-span-2 space-y-6">
+                    <a href="#" id="contact-email" class="flex items-center gap-4 p-4 bg-cardBg rounded-xl border border-slate-800 hover:border-primary transition-colors group">
+                        <div class="bg-slate-800 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
+                            <i data-lucide="mail" class="text-primary"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">Email</p>
+                            <p class="text-white font-medium" id="contact-email-text">Loading...</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" id="contact-whatsapp" target="_blank" class="flex items-center gap-4 p-4 bg-cardBg rounded-xl border border-slate-800 hover:border-[#25D366] transition-colors group">
+                        <div class="bg-slate-800 p-3 rounded-lg group-hover:bg-[#25D366]/20 transition-colors">
+                            <i data-lucide="message-circle" class="text-[#25D366]"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">WhatsApp</p>
+                            <p class="text-white font-medium">Send a message</p>
+                        </div>
+                    </a>
+                    
+                    <a href="#" id="contact-linkedin" target="_blank" class="flex items-center gap-4 p-4 bg-cardBg rounded-xl border border-slate-800 hover:border-[#0077b5] transition-colors group">
+                        <div class="bg-slate-800 p-3 rounded-lg group-hover:bg-[#0077b5]/20 transition-colors">
+                            <i data-lucide="linkedin" class="text-[#0077b5]"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">LinkedIn</p>
+                            <p class="text-white font-medium">Connect with me</p>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="md:col-span-3">
+                    <form class="bg-cardBg p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl" onsubmit="event.preventDefault(); alert('For a fully functional form without a backend, consider using Formspree or Netlify Forms! This is a UI placeholder.');">
+                        <div class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-slate-400 mb-1">Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-600" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-slate-400 mb-1">Email</label>
+                                <input type="email" id="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-600" placeholder="john@example.com">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-slate-400 mb-1">Message</label>
+                                <textarea id="message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors placeholder:text-slate-600 resize-none" placeholder="How can I help you?"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary hover:bg-sky-500 text-white font-medium py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
+                                Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center text-center">
+            <h2 class="text-2xl font-bold text-white mb-2" id="footer-name">Elijah Kiwumulo Lule</h2>
+            <p class="text-slate-400 italic mb-8">"Building with technology. Creating with purpose."</p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm font-medium">
+                <a href="#home" class="text-slate-400 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-slate-400 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="text-slate-400 hover:text-primary transition-colors">Skills</a>
+                <a href="#projects" class="text-slate-400 hover:text-primary transition-colors">Projects</a>
+                <a href="#media" class="text-slate-400 hover:text-primary transition-colors">Media</a>
+                <a href="#experience" class="text-slate-400 hover:text-primary transition-colors">Experience</a>
+                <a href="#contact" class="text-slate-400 hover:text-primary transition-colors">Contact</a>
+            </div>
+            
+            <div class="flex gap-6 mb-8" id="footer-socials">
+                <!-- Populated by JS -->
+            </div>
+            
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year">2026</span> Elijah Kiwumulo Lule. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
